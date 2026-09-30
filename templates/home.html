@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/styles/home.css">
+	<title>Yangiliklar</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Kun yangiliklari</h1>
+		<ul class="news-list">
+			{% for post in object_list %}
+			<li class="news-item">
+				<h2 class="news-title">{{ post.title }}</h2>
+				<p class="news-description">{{ post.description }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</body>
+
+</html>

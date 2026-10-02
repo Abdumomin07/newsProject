@@ -119,10 +119,13 @@ import os
 
 STATIC_URL = 'static/'
 
-# Static fayllar joylashgan papka yo'li
+# Static fayllar joylashgan papka
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# Production uchun static fayllar yig'iladigan papka
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Email
